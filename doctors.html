@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Connect - Our Doctors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #0052a3;
+        }
+        
+        .page-header {
+            background-color: #0066cc;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        
+        .doctors {
+            padding: 60px 0;
+        }
+        
+        .departments-filter {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .filter-btn {
+            background-color: transparent;
+            border: 1px solid #0066cc;
+            color: #0066cc;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #0066cc;
+            color: white;
+        }
+        
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .doctor-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .doctor-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .doctor-info {
+            padding: 20px;
+        }
+        
+        .doctor-info h3 {
+            color: #0066cc;
+            margin-bottom: 5px;
+        }
+        
+        .doctor-department {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .doctor-qualification {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .doctor-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .doctor-btn {
+            flex: 1;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .profile-btn {
+            background-color: transparent;
+            border: 1px solid #0066cc;
+            color: #0066cc;
+        }
+        
+        .profile-btn:hover {
+            background-color: rgba(0, 102, 204, 0.1);
+        }
+        
+        .appointment-btn {
+            background-color: #0066cc;
+            color: white;
+            border: 1px solid #0066cc;
+        }
+        
+        .appointment-btn:hover {
+            background-color: #0052a3;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Medi-Connect</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Medical Team</h1>
+            <p>Meet our highly qualified and experienced healthcare professionals dedicated to providing the best medical care</p>
+        </div>
+    </section>
+    
+    <section class="doctors container">
+        <div class="departments-filter">
+            <button class="filter-btn active">All Departments</button>
+            <button class="filter-btn">Cardiology</button>
+            <button class="filter-btn">Neurology</button>
+            <button class="filter-btn">Pediatrics</button>
+            <button class="filter-btn">Orthopedics</button>
+            <button class="filter-btn">Emergency Medicine</button>
+        </div>
+        
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc2.png" alt="Dr. Sarah Johnson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <div class="doctor-department">Cardiology</div>
+                    <div class="doctor-qualification">MD, FACC - Cardiology Specialist</div>
+                    <p>Dr. Johnson specializes in interventional cardiology and has over 15 years of experience in treating heart diseases.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc1.png" alt="Dr. Michael Chen" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <div class="doctor-department">Neurology</div>
+                    <div class="doctor-qualification">MD, PhD - Neurosurgery</div>
+                    <p>Dr. Chen is a renowned neurosurgeon specializing in complex brain surgeries and neurological disorders.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc5.png" alt="Dr. Emily Rodriguez" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Emily Rodriguez</h3>
+                    <div class="doctor-department">Pediatrics</div>
+                    <div class="doctor-qualification">MD, FAAP - Pediatric Specialist</div>
+                    <p>Dr. Rodriguez has dedicated her career to providing comprehensive healthcare for children of all ages.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc4.png" alt="Dr. James Wilson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. James Wilson</h3>
+                    <div class="doctor-department">Orthopedics</div>
+                    <div class="doctor-qualification">MD, FAAOS - Orthopedic Surgeon</div>
+                    <p>Dr. Wilson specializes in joint replacement surgery and sports medicine with over 12 years of experience.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc9.png" alt="Dr. Lisa Patel" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Lisa Patel</h3>
+                    <div class="doctor-department">Emergency Medicine</div>
+                    <div class="doctor-qualification">MD, FACEP - Emergency Physician</div>
+                    <p>Dr. Patel is an experienced emergency medicine physician specialized in trauma care and critical interventions.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc10.png" alt="Dr. Robert Kim" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Robert Kim</h3>
+                    <div class="doctor-department">Cardiology</div>
+                    <div class="doctor-qualification">MD, FACC - Electrophysiologist</div>
+                    <p>Dr. Kim specializes in cardiac electrophysiology and the treatment of heart rhythm disorders.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc15.png" alt="Dr. Sophia Martinez" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Sophia Martinez</h3>
+                    <div class="doctor-department">Neurology</div>
+                    <div class="doctor-qualification">MD - Neurologist</div>
+                    <p>Dr. Martinez specializes in the diagnosis and treatment of complex neurological disorders and conditions.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doctor-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\doc14.png" alt="Dr. David Thompson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. David Thompson</h3>
+                    <div class="doctor-department">Orthopedics</div>
+                    <div class="doctor-qualification">MD - Spine Specialist</div>
+                    <p>Dr. Thompson is specialized in spine surgery and the treatment of spinal disorders and injuries.</p>
+                    <div class="doctor-buttons">
+                        <a href="#" class="doctor-btn profile-btn">View Profile</a>
+                        <a href="appointments.html" class="doctor-btn appointment-btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#emergency">Emergency Care</a></li>
+                        <li><a href="services.html#pediatric">Pediatrics</a></li>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>123 Medical Dr, Healthcare City</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Emergency: (123) 456-7999</li>
+                        <li>Email: info@Medi-Connect.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Working Hours</h3>
+                    <ul>
+                        <li>Emergency: 24/7</li>
+                        <li>Outpatient: Mon-Fri (8am-8pm)</li>
+                        <li>Weekend: Sat (9am-5pm)</li>
+                        <li>Laboratory: Mon-Sat (7am-7pm)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Medi-Connect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

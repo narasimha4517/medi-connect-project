@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Connect - Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #0052a3;
+        }
+        
+        .page-header {
+            background-color: #0066cc;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        
+        .services {
+            padding: 60px 0;
+        }
+        
+        .service-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (min-width: 768px) {
+            .service-item {
+                flex-direction: row;
+            }
+        }
+        
+        .service-image {
+            flex: 1;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            flex: 2;
+            padding: 30px;
+        }
+        
+        .service-content h2 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        
+        .service-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .service-content .btn {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .service-content .btn:hover {
+            background-color: #0052a3;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Medi-Connect</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Medical Services</h1>
+            <p>Comprehensive healthcare solutions for you and your family with cutting-edge technology and expert professionals</p>
+        </div>
+    </section>
+    
+    <section class="services container">
+        <div id="emergency" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex3.png')"></div>
+            <div class="service-content">
+                <h2>Emergency Care</h2>
+                <p>Our emergency department operates 24/7 to provide immediate medical attention for life-threatening conditions. Equipped with advanced technology and staffed by experienced emergency physicians and nurses.</p>
+                <ul>
+                    <li>24/7 Emergency Services</li>
+                    <li>Trauma Care Units</li>
+                    <li>Rapid Response Teams</li>
+                    <li>Advanced Life Support</li>
+                    <li>Critical Care Transport</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="pediatric" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex5.jpg')"></div>
+            <div class="service-content">
+                <h2>Pediatrics</h2>
+                <p>Our pediatric department provides comprehensive healthcare for infants, children, and adolescents. From routine check-ups to specialized care for complex conditions, our pediatricians ensure the health and well-being of your children.</p>
+                <ul>
+                    <li>Well-Child Visits</li>
+                    <li>Immunizations</li>
+                    <li>Developmental Assessments</li>
+                    <li>Pediatric Specialties</li>
+                    <li>Child-Friendly Environment</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="cardiology" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex6.jpg')"></div>
+            <div class="service-content">
+                <h2>Cardiology</h2>
+                <p>Our cardiology department offers comprehensive diagnostic and treatment services for heart conditions. Our cardiologists use advanced technology to provide accurate diagnoses and effective treatment plans.</p>
+                <ul>
+                    <li>Heart Disease Diagnosis</li>
+                    <li>Cardiac Imaging</li>
+                    <li>Interventional Cardiology</li>
+                    <li>Electrophysiology</li>
+                    <li>Cardiac Rehabilitation</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="neurology" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex7.jpg')"></div>
+            <div class="service-content">
+                <h2>Neurology</h2>
+                <p>Our neurology department specializes in diagnosing and treating disorders of the nervous system. Our neurologists and neurosurgeons provide expert care for conditions affecting the brain, spinal cord, and nerves.</p>
+                <ul>
+                    <li>Neurological Evaluations</li>
+                    <li>Neuroimaging</li>
+                    <li>Treatment for Neurological Disorders</li>
+                    <li>Neurosurgery</li>
+                    <li>Neurorehabilitation</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="orthopedics" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex8.jpg')"></div>
+            <div class="service-content">
+                <h2>Orthopedics</h2>
+                <p>Our orthopedic department focuses on the diagnosis, treatment, and prevention of disorders of the musculoskeletal system. Our orthopedic surgeons and specialists provide comprehensive care for bone, joint, ligament, tendon, and muscle conditions.</p>
+                <ul>
+                    <li>Joint Replacement Surgery</li>
+                    <li>Sports Medicine</li>
+                    <li>Spine Surgery</li>
+                    <li>Trauma Care</li>
+                    <li>Physical Therapy</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="specialized" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex9.jpg')"></div>
+            <div class="service-content">
+                <h2>Specialized Treatments</h2>
+                <p>We offer advanced specialized treatments for complex medical conditions, performed by highly trained specialists using cutting-edge technology and techniques.</p>
+                <ul>
+                    <li>Minimally Invasive Surgery</li>
+                    <li>Cancer Treatment</li>
+                    <li>Advanced Imaging</li>
+                    <li>Transplant Services</li>
+                    <li>Genetic Counseling</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div id="preventive" class="service-item">
+            <div class="service-image" style="background-image: url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex10.jpg')"></div>
+            <div class="service-content">
+                <h2>Preventive Care</h2>
+                <p>Our preventive care services focus on maintaining good health and preventing diseases. We offer comprehensive health check-ups and preventive healthcare programs tailored to individual needs.</p>
+                <ul>
+                    <li>Health Screenings</li>
+                    <li>Vaccination Programs</li>
+                    <li>Lifestyle Counseling</li>
+                    <li>Chronic Disease Management</li>
+                    <li>Nutrition and Diet Planning</li>
+                </ul>
+                <a href="appointments.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#emergency">Emergency Care</a></li>
+                        <li><a href="services.html#pediatric">Pediatrics</a></li>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>123 Medical Dr, Healthcare City</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Emergency: (123) 456-7999</li>
+                        <li>Email: info@Medi-Connect.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Working Hours</h3>
+                    <ul>
+                        <li>Emergency: 24/7</li>
+                        <li>Outpatient: Mon-Fri (8am-8pm)</li>
+                        <li>Weekend: Sat (9am-5pm)</li>
+                        <li>Laboratory: Mon-Sat (7am-7pm)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Medi-Connect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Connect - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #0052a3;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('C:/Users/chint/OneDrive/Desktop/FSD/assets/ex12.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0052a3;
+        }
+        
+        .features {
+            padding: 60px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .feature-content {
+            padding: 20px;
+        }
+        
+        .feature-content h3 {
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #666;
+        }
+        
+        .cta {
+            background-color: #0066cc;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            color: #ddd;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Medi-Connect</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to Medi-Connect </h1>
+        <p>Providing comprehensive healthcare with compassion and excellence since 1985</p>
+        <a href="login.html" class="btn">Login</a>
+        <br>
+        <a href="register.html" class="btn">Register</a>
+
+    </section>
+    
+    <section class="features container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">We offer a wide range of medical services with state-of-the-art facilities and experienced healthcare professionals</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\ex3.png" alt="Emergency Care">
+                <div class="feature-content">
+                    <h3>Emergency Care</h3>
+                    <p>24/7 emergency services with rapid response teams for critical situations</p>
+                    <a href="services.html#emergency" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\ex9.jpg" alt="Specialized Treatment">
+                <div class="feature-content">
+                    <h3>Specialized Treatment</h3>
+                    <p>Advanced treatments for complex medical conditions by specialist doctors</p>
+                    <a href="services.html#specialized" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <img src="C:\Users\chint\OneDrive\Desktop\FSD\assets\ex11.jpg" alt="Preventive Care"  height="612" width="612">
+                <div class="feature-content">
+                    <h3>Preventive Care</h3>
+                    <p>Comprehensive health check-ups and preventive healthcare programs</p>
+                    <a href="services.html#preventive" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Need Medical Assistance?</h2>
+            <p>Our dedicated team of healthcare professionals is ready to help you with any medical concerns</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#emergency">Emergency Care</a></li>
+                        <li><a href="services.html#pediatric">Pediatrics</a></li>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>123 Medical Dr, Healthcare City</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Emergency: (123) 456-7999</li>
+                        <li>Email: info@Medi-Connect.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Working Hours</h3>
+                    <ul>
+                        <li>Emergency: 24/7</li>
+                        <li>Outpatient: Mon-Fri (8am-8pm)</li>
+                        <li>Weekend: Sat (9am-5pm)</li>
+                        <li>Laboratory: Mon-Sat (7am-7pm)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Medi-Connect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
